@@ -1,24 +1,31 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+
+char userInput[100];
 
 void printMarquee();
+void startProgram();
 
 int main()
 {
     printMarquee();
+    startProgram();
 
     return 0;
 }
 
-
-void printMarquee()
-{
+void clear() {
     #ifdef _WIN32
         system("cls");
     #else
         system("clear");
     #endif
+}
 
+void printMarquee()
+{
+    clear();
     printf("==)>=-=<(====)>=-=<(====)>=-=<(====)>=-=<(====)>=-=<(====)>=-=<(====)>=-=<(====)>=-=<(====)>=-=<(====)>=-=<(==\n\n");
     
     printf("      _,=======  ,=====,  =======,   ,=====,       ,=====  =======  ,=====,   //      =======  ======  ====\n");
@@ -37,5 +44,23 @@ void printMarquee()
     printf("Russian military got their hands on the tape. With modern technology, they built a robotic clone of Stalin and loaded\n");
     printf("his mind onto it. Stalin, notorious for his mistrust in others, used his newfound superhuman power to eliminate all of\n");
     printf("his revivers. And so, Robo-Stalin was unleashed unto the world. After studying the world, he was sickened by what he saw,\n");
-    printf("and so decided to resolve it how he believed would be best: taking out the CIA.");
+    printf("and so decided to resolve it how he believed would be best: taking out the CIA.\n\n");
+}
+
+void startProgram()
+{
+    printf("Would you like to save... the world?????? (y/n)\n");
+    scanf("%s", userInput);
+    
+    clear();
+
+    // i would use a switch statement here but like i need enums or whatever soooo if elses it is
+    // also these messages (and code) more temporary than my appreciation of gary after he doesn't call me gross for 3 seconds
+    if("%d", strcmp(userInput, "y") == 0) {
+        printf("Thank you for your service...");
+    } else if ("%d", strcmp(userInput, "yes") == 0) {
+        printf("Why, but still, thank you for your service...");
+    } else {
+        printf("And so, the world shall end.");
+    }
 }
