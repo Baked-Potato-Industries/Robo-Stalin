@@ -1,0 +1,11 @@
+#include "server.h"
+#include <stdio.h>
+#include <string.h>
+
+void *serverInput() 
+{
+	struct Server* server = (struct Server *)arg;
+
+
+
+}
