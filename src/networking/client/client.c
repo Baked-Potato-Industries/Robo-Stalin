@@ -51,8 +51,8 @@ char* get(char* link)
 
 }
 
-int main (void) {
-	char* ans = get("https://www.postman-echo.com/status/200");
-	printf("%s\n", ans);
-	return 0;
-}
+//int main (void) {
+//	char* ans = get("https://www.postman-echo.com/status/200");
+//	printf("%s\n", ans);
+//	return 0;
+//}
