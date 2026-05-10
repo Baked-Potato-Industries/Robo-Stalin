@@ -1,0 +1,16 @@
+SRCS := $(shell find . -name "*.c")
+OBJS := $(SRCS:.c=.o)
+DEPS := lcurl
+
+BUILD_OBJS = build/obj
+BUILD = build
+
+Robo-Stalin: $(OBJS) 
+	gcc	$(OBJS) -o Robo-Stalin -$(DEPS)
+
+%.o: %.c (BUILD_OBJS) 
+	gcc -c $< -o $@
+
+(BUILD_OBJS):
+	mkdir -p $(BUILD_OBJS)
+
